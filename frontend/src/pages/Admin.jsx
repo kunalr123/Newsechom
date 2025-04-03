@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { UserData } from "../context/User";
 import { Link, useNavigate } from "react-router-dom";
-import { SongData } from "../context/Song";
+import { SongData } from "../context/song";
 import { MdDelete } from "react-icons/md";
 
 const Admin = () => {

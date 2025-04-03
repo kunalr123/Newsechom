@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link,useNavigate} from "react-router-dom";
 import { UserData } from "../context/User";
-import { SongData } from "../context/Song";
+// import { SongData } from "../context/Song";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -9,14 +9,14 @@ const Login = () => {
 
   const { loginUser, btnLoading } = UserData();
 
-  const { fetchSongs, fetchAlbums } = SongData();
+//   const { fetchSongs, fetchAlbums } = SongData();
 
   const navigate = useNavigate();
 
   const submitHandler = (e) => {
     e.preventDefault();
 
-    loginUser(email, password, navigate, fetchSongs, fetchAlbums);
+    loginUser(email, password,navigate);
   };
   return (
     <div className="flex items-center justify-center h-screen max-h-screen">

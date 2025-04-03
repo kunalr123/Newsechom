@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { UserData } from "../context/User";
-import { SongData } from "../context/Song";
+// import { SongData } from "../context/Song";
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -12,12 +12,12 @@ const Register = () => {
 
   const navigate = useNavigate();
 
-  const { fetchSongs, fetchAlbums } = SongData();
+//   const { fetchSongs, fetchAlbums } = SongData();
 
   const submitHandler = (e) => {
     e.preventDefault();
 
-    registerUser(name, email, password, navigate, fetchSongs, fetchAlbums);
+    registerUser(name, email, password, navigate);
   };
   return (
     <div className="flex items-center justify-center h-screen max-h-screen">

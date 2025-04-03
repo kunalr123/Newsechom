@@ -3,6 +3,8 @@ import { Song } from "../models/Song.js";
 import TryCatch from "../utils/TryCatch.js";
 import getDataurl from "../utils/urlGenerator.js";
 import cloudinary from "cloudinary";
+import dotenv from "dotenv";
+
 
 export const createAlbum = TryCatch(async (req, res) => {
   if (req.user.role !== "admin")
