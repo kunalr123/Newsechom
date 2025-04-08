@@ -15,3 +15,17 @@ body {
 .auth-btn {
   @apply w-full bg-blue-500 hover:bg-blue-600 text-black font-semibold p-3 rounded-full;
 }
+
+
+*::-webkit-scrollbar {
+  height: 0.5rem;
+  width: 0.1rem;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #2e2d2b;
+}

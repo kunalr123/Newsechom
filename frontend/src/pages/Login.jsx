@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link,useNavigate} from "react-router-dom";
 import { UserData } from "../context/User";
-// import { SongData } from "../context/Song";
+import { SongData } from "../context/song";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -9,26 +9,26 @@ const Login = () => {
 
   const { loginUser, btnLoading } = UserData();
 
-//   const { fetchSongs, fetchAlbums } = SongData();
+  const { fetchSongs, fetchAlbums } = SongData();
 
   const navigate = useNavigate();
 
   const submitHandler = (e) => {
     e.preventDefault();
 
-    loginUser(email, password,navigate);
+    loginUser(email, password,navigate,fetchSongs, fetchAlbums);
   };
   return (
     <div className="flex items-center justify-center h-screen max-h-screen">
       <div className="bg-black text-white p-8 rounded-lg shadow-lg max-w-md w-full">
         <h2 className="text-3xl font-semibold text-center mb-8">
-          Login to Spotify
+          Login to Newsechom
         </h2>
 
         <form className="mt-8" onSubmit={submitHandler}>
           <div className="mb-4">
             <label className="block text-sm font-medium mb-1">
-              Email or username
+              Email 
             </label>
             <input
               type="email"
