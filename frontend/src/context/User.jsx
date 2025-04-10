@@ -76,7 +76,7 @@ export const UserProvider = ({ children }) => {
 
   async function logoutUser() {
     try {
-      const { data } = await axios.get("/api/user/logout");
+       await axios.get("/api/user/logout");
 
       window.location.reload();
     } catch (error) {
