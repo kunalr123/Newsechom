@@ -68,26 +68,26 @@ export const logoutUser = TryCatch(async (req, res) => {
   });
 });
 
-// export const saveToPlaylist = TryCatch(async (req, res) => {
-//   const user = await User.findById(req.user._id);
+export const saveToPlaylist = TryCatch(async (req, res) => {
+  const user = await User.findById(req.user._id);
 
-//   if (user.playlist.includes(req.params.id)) {
-//     const index = user.playlist.indexOf(req.params.id);
+  if (user.playlist.includes(req.params.id)) {
+    const index = user.playlist.indexOf(req.params.id);
 
-//     user.playlist.splice(index, 1);
+    user.playlist.splice(index, 1);
 
-//     await user.save();
+    await user.save();
 
-//     return res.json({
-//       message: "Removed from playlist",
-//     });
-//   }
+    return res.json({
+      message: "Removed from playlist",
+    });
+  }
 
-//   user.playlist.push(req.params.id);
+  user.playlist.push(req.params.id);
 
-//   await user.save();
+  await user.save();
 
-//   return res.json({
-//     message: "added to playlist",
-//   });
-// });
+  return res.json({
+    message: "added to playlist",
+  });
+});

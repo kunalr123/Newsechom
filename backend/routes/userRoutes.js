@@ -4,7 +4,7 @@ import {
   logoutUser,
   myProfile,
   registerUser,
-  // saveToPlaylist,
+  saveToPlaylist,
 } from "../controllers/userControllers.js";
 import { isAuth } from "../middlewares/isAuth.js";
 
@@ -14,6 +14,6 @@ router.post("/register", registerUser);
 router.post("/login", loginUser);
 router.get("/me", isAuth, myProfile);
 router.get("/logout", isAuth, logoutUser);
-// router.post("/song/:id", isAuth, saveToPlaylist);
+router.post("/song/:id", isAuth, saveToPlaylist);
 
 export default router;
