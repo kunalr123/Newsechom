@@ -33,6 +33,8 @@ export const SongProvider = ({ children }) => {
       setSong(data);
     } catch (error) {
       console.log(error);
+    } finally {
+      setSongLoading(false); // <- And this
     }
   }
 
@@ -151,6 +153,7 @@ export const SongProvider = ({ children }) => {
       console.log(error);
     }
   }
+
   return (
     <SongContext.Provider
       value={{
