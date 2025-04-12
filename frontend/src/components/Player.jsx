@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { SongData } from "../context/song";
+import { SongData } from "../context/Song";
 import { GrChapterNext, GrChapterPrevious } from "react-icons/gr";
 import { FaPause, FaPlay } from "react-icons/fa";
 

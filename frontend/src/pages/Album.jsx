@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Layout from "../components/Layout";
-import { SongData } from "../context/song";
+import { SongData } from "../context/Song";
 import { useParams } from "react-router-dom";
 import { assets } from "../assets/assets";
 import { UserData } from "../context/User";
