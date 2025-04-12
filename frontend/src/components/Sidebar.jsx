@@ -1,7 +1,7 @@
 import React from "react";
 import { assets } from "../assets/assets";
 import { useNavigate } from "react-router-dom";
-import PlayListCard from "./PlayListCard";
+// import PlayListCard from "./PlayListCard";
 import { UserData } from "../context/User";
 
 const Sidebar = () => {
