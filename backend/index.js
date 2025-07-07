@@ -25,7 +25,7 @@ const port = process.env.PORT;
 import userRoutes from "./routes/userRoutes.js";
 import songRoutes from "./routes/songRoutes.js";
 
-//using routes
+//using route
 app.use("/api/user", userRoutes);
 app.use("/api/song", songRoutes);
 
@@ -41,3 +41,6 @@ app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
   connectDb();
 });
+
+
+
