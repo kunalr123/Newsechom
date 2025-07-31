@@ -6,7 +6,7 @@ import cloudinary from "cloudinary";
 import path from "path";
 
 dotenv.config();
-
+console.log("JWT_SECRET:", process.env.JWT_SECRET);
 cloudinary.v2.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
   api_key: process.env.CLOUDINARY_API_KEY,

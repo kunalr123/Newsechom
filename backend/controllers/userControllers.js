@@ -22,6 +22,7 @@ export const registerUser = TryCatch(async (req, res) => {
   });
 
   generateToken(user._id, res);
+  
 
   res.status(201).json({
     user,
